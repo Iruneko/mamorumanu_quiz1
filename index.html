@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>マモル・マヌー クイズ</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="quiz-container">
+
+      <!-- HEADER -->
+      <header class="quiz-header">
+
+        <div class="drum-icon">
+          🥁
+        </div>
+
+        <h1>
+          マモル・マヌー クイズ
+        </h1>
+
+        <p class="english-title">
+          HOW WELL DO YOU KNOW MAMORU MANU?
+        </p>
+
+      </header>
+
+
+      <!-- START SCREEN -->
+      <section id="start-screen" class="screen active">
+
+        <div class="intro-card">
+
+          <div class="small-drum">
+            🥁
+          </div>
+
+          <img
+            src="mamoru1.png"
+            alt="Mamoru Manu"
+            class="intro-photo"
+          />
+
+          <h2>
+            マモル・マヌーを<br />
+            どこまで知っていますか？
+          </h2>
+
+          <p>
+            音楽のことから、家族しか知らない
+            マモル・マヌーのエピソードまで。
+          </p>
+
+          <p class="question-info">
+            全5問
+          </p>
+
+          <button id="start-btn">
+            クイズをスタート
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- QUIZ SCREEN -->
+      <section id="quiz-screen" class="screen">
+
+        <div class="quiz-top">
+
+          <p id="question-number">
+            QUESTION 1 / 5
+          </p>
+
+          <p id="score">
+            SCORE: 0
+          </p>
+
+        </div>
+
+
+        <div class="question-card">
+
+          <div class="question-drum">
+            🥁
+          </div>
+
+          <h2 id="question">
+            Question
+          </h2>
+
+
+          <div
+            id="answer-buttons"
+            class="answer-buttons"
+          >
+
+            <button class="answer-btn"></button>
+
+            <button class="answer-btn"></button>
+
+            <button class="answer-btn"></button>
+
+            <button class="answer-btn"></button>
+
+            <button class="answer-btn"></button>
+
+          </div>
+
+
+          <p id="result-message"></p>
+
+
+          <button
+            id="next-btn"
+            class="next-btn"
+          >
+            次の問題へ
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- RESULT SCREEN -->
+      <section id="result-screen" class="screen">
+
+        <div class="result-card">
+
+          <div class="result-drum">
+            🥁
+          </div>
+
+          <h2>
+            RESULT
+          </h2>
+
+          <p class="result-title">
+            あなたの結果は…
+          </p>
+
+          <div id="final-score">
+            0 / 5
+          </div>
+
+          <p id="final-message"></p>
+
+          <button id="restart-btn">
+            もう一度チャレンジ
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- FOOTER -->
+      <footer>
+
+        <p>
+          🥁 Mamoru Manu Quiz
+        </p>
+
+      </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

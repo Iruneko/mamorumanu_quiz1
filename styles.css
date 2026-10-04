@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans+JP:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff4ff,
+      #8fd3f4,
+      #3c91d1
+    );
+
+  min-height: 100vh;
+  color: #16324f;
+}
+
+
+/* MAIN CONTAINER */
+
+.quiz-container {
+  width: 92%;
+  max-width: 850px;
+  margin: 30px auto;
+}
+
+
+/* HEADER */
+
+.quiz-header {
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b4f8a,
+      #1c78b9,
+      #59bce8
+    );
+
+  padding: 30px 20px;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 25px rgba(0, 70, 120, 0.25);
+
+  margin-bottom: 25px;
+
+  color: white;
+
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+
+.drum-icon {
+  font-size: 55px;
+  margin-bottom: 5px;
+}
+
+
+.quiz-header h1 {
+  margin: 0;
+
+  font-size: 42px;
+
+  letter-spacing: 3px;
+
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.english-title {
+  font-family: "Bungee", sans-serif;
+
+  margin-top: 10px;
+
+  color: #e7f8ff;
+
+  font-size: 15px;
+
+  letter-spacing: 1px;
+}
+
+
+/* SCREEN CONTROL */
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+
+/* START CARD */
+
+.intro-card {
+  background: rgba(255, 255, 255, 0.95);
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  border: 2px solid #a8dbf4;
+
+  box-shadow:
+    0 10px 25px rgba(0, 70, 120, 0.18);
+}
+
+
+.small-drum {
+  font-size: 45px;
+}
+
+
+.intro-card h2 {
+  font-size: 30px;
+
+  color: #0b578f;
+
+  margin-top: 10px;
+
+  line-height: 1.5;
+}
+
+
+.intro-card p {
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: #385a72;
+}
+
+
+.question-info {
+  font-size: 22px !important;
+
+  font-weight: bold;
+
+  color: #0878ba !important;
+}
+
+
+/* BUTTONS */
+
+button {
+  font-family: "Noto Sans JP", sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  padding: 15px 24px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+#start-btn,
+#restart-btn {
+  margin-top: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0878ba,
+      #45b8e8
+    );
+
+  color: white;
+
+  box-shadow:
+    0 6px 14px rgba(0, 100, 160, 0.25);
+}
+
+
+#start-btn:hover,
+#restart-btn:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #08669c,
+      #30a4d5
+    );
+}
+
+
+/* TOP BAR */
+
+.quiz-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: #ffffff;
+
+  padding: 15px 20px;
+
+  border-radius: 12px;
+
+  margin-bottom: 18px;
+
+  border: 2px solid #b9e5f8;
+
+  box-shadow:
+    0 5px 14px rgba(0, 70, 120, 0.12);
+}
+
+
+.quiz-top p {
+  margin: 0;
+
+  color: #0b578f;
+
+  font-weight: 700;
+
+  font-size: 16px;
+}
+
+
+/* QUESTION CARD */
+
+.question-card {
+  background: rgba(255, 255, 255, 0.97);
+
+  padding: 32px;
+
+  border-radius: 20px;
+
+  border: 2px solid #9dd9f3;
+
+  box-shadow:
+    0 10px 25px rgba(0, 70, 120, 0.2);
+}
+
+
+.question-drum {
+  text-align: center;
+
+  font-size: 40px;
+
+  margin-bottom: 5px;
+}
+
+
+#question {
+  text-align: center;
+
+  color: #124f7b;
+
+  font-size: 27px;
+
+  line-height: 1.6;
+
+  margin-top: 5px;
+
+  margin-bottom: 25px;
+}
+
+
+/* ANSWERS */
+
+.answer-buttons {
+  display: grid;
+
+  gap: 13px;
+}
+
+
+.answer-btn {
+  width: 100%;
+
+  background: #e8f7ff;
+
+  color: #174563;
+
+  text-align: left;
+
+  border: 2px solid #9ed8f1;
+
+  padding: 16px 20px;
+
+  border-radius: 12px;
+}
+
+
+.answer-btn:hover {
+  background: #cceeff;
+
+  transform: translateX(3px);
+}
+
+
+/* CORRECT */
+
+.answer-btn.correct {
+  background: #d7f4df;
+
+  border-color: #55a86a;
+
+  color: #225c30;
+}
+
+
+/* WRONG */
+
+.answer-btn.wrong {
+  background: #ffe2e2;
+
+  border-color: #cf6d6d;
+
+  color: #803333;
+}
+
+
+.answer-btn:disabled {
+  cursor: default;
+
+  opacity: 1;
+}
+
+
+/* MESSAGE */
+
+#result-message {
+  min-height: 32px;
+
+  margin-top: 20px;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #0b578f;
+
+  text-align: center;
+}
+
+
+/* NEXT */
+
+.next-btn {
+  display: none;
+
+  margin: 20px auto 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0878ba,
+      #45b8e8
+    );
+
+  color: white;
+}
+
+
+.next-btn:hover {
+  background: #086da8;
+}
+
+
+/* RESULT */
+
+.result-card {
+  background: rgba(255, 255, 255, 0.97);
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  border: 2px solid #9dd9f3;
+
+  text-align: center;
+
+  box-shadow:
+    0 10px 25px rgba(0, 70, 120, 0.2);
+}
+
+
+.result-drum {
+  font-size: 55px;
+}
+
+
+.result-card h2 {
+  font-family: "Bungee", sans-serif;
+
+  color: #0b578f;
+
+  font-size: 38px;
+
+  margin: 5px 0;
+}
+
+
+.result-title {
+  font-size: 20px;
+
+  color: #42677f;
+}
+
+
+#final-score {
+  font-size: 52px;
+
+  font-weight: 700;
+
+  color: #0878ba;
+
+  margin: 20px 0;
+}
+
+
+#final-message {
+  font-size: 20px;
+
+  line-height: 1.7;
+
+  color: #31566e;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #174f72;
+
+  font-weight: 600;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .quiz-container {
+    width: 94%;
+
+    margin: 15px auto;
+  }
+
+
+  .quiz-header {
+    padding: 22px 12px;
+  }
+
+
+  .quiz-header h1 {
+    font-size: 29px;
+  }
+
+
+  .drum-icon {
+    font-size: 44px;
+  }
+
+
+  .english-title {
+    font-size: 11px;
+  }
+
+
+  .intro-card,
+  .question-card,
+  .result-card {
+    padding: 22px 17px;
+  }
+
+
+  .intro-card h2 {
+    font-size: 24px;
+  }
+
+
+  #question {
+    font-size: 22px;
+  }
+
+
+  .answer-btn {
+    font-size: 17px;
+
+    padding: 14px 16px;
+  }
+
+
+  .quiz-top {
+    padding: 12px 14px;
+  }
+
+
+  .quiz-top p {
+    font-size: 14px;
+  }
+
+}
+.intro-photo {
+  width: 220px;
+  max-width: 80%;
+  display: block;
+  margin: 18px auto 20px;
+  border-radius: 18px;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 70, 120, 0.25);
+}
